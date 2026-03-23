@@ -21,7 +21,10 @@ export function formatDistanceToNow(rawDate: string): string {
   });
 }
 
-// const rawDate = '2024-06-01T12:00:00Z';
-// console.log(rawDate);
-// console.log(formatDatetime(rawDate));
-// console.log(formatDatetimeRelative(rawDate));
+export function formatHour(timestampMs: number): string {
+  const date = new Date(timestampMs);
+
+  return format(date, 'HH:mm:ss', {
+    locale: ptBR,
+  });
+}
