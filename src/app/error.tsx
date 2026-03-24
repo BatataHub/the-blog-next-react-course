@@ -10,16 +10,14 @@ type RootErrorPageProps = {
 
 export default function RootErrorPage({ error }: RootErrorPageProps) {
   useEffect(() => {
-    console.error(error);
+    console.log(error);
   }, [error]);
 
   return (
     <ErrorMessage
-      pageTitle='Erro - Ocorreu um erro'
-      contentTitle='Ocorreu um erro'
-      content={
-        'Ocorreu um erro inesperado. Por favor, tente novamente mais tarde ou entre em contato com o suporte se o problema persistir.'
-      }
+      pageTitle='Internal Server Error'
+      contentTitle='501'
+      content='Ocorreu um erro do qual nossa aplicação não conseguiu ser recuperar. Tente novamente mais tarde.'
     />
   );
 }

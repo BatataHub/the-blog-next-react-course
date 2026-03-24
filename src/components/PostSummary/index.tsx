@@ -9,7 +9,7 @@ type PostSummaryProps = {
   excerpt: string;
 };
 
-export function PostSummary({
+export async function PostSummary({
   postHeading,
   postLink,
   createdAt,
