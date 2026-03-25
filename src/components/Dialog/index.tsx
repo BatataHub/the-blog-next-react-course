@@ -1,29 +1,29 @@
 'use client';
 
 import clsx from 'clsx';
-import React from 'react';
 
 type DialogProps = {
-  invisible?: boolean;
+  isVisible?: boolean;
   title: string;
   content: React.ReactNode;
-  onCancel: () => void;
   onConfirm: () => void;
+  onCancel: () => void;
   disabled: boolean;
 };
 
 export function Dialog({
-  invisible = false,
+  isVisible = false,
   title,
   content,
   onCancel,
   onConfirm,
   disabled,
 }: DialogProps) {
-  if (!invisible) return null;
+  if (!isVisible) return null;
 
   function handleCancel() {
     if (disabled) return;
+
     onCancel();
   }
 
@@ -54,7 +54,7 @@ export function Dialog({
         <div className='flex items-center justify-around'>
           <button
             className={clsx(
-              'bg-state-500 hover:bg-slate-300 transition text-slate-950',
+              'bg-slate-200 hover:bg-slate-300 transition text-slate-950',
               'flex items-center justify-center',
               'py-2 px-4 rounded-lg cursor-pointer',
               'disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed',
@@ -65,6 +65,7 @@ export function Dialog({
           >
             Cancelar
           </button>
+
           <button
             className={clsx(
               'bg-blue-500 hover:bg-blue-600 transition text-blue-50',

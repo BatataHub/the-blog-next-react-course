@@ -10,7 +10,7 @@ export default async function ExemploDynamicPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const hour = formatHour(new Date().toISOString());
+  const hour = formatHour(Date.now());
 
   return (
     <main className='min-h-[600px] text-4xl font-bold'>

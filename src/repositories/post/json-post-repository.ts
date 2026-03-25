@@ -2,7 +2,7 @@ import { PostModel } from '@/models/post/post-model';
 import { PostRepository } from './post-repository';
 import { resolve } from 'path';
 import { readFile } from 'fs/promises';
-import { SIMULATE_WAIT_IN_MS } from '@/lib/post/constants';
+import { SIMULATE_WAIT_IN_MS } from '@/lib/constants';
 
 const ROOT_DIR = process.cwd();
 const JSON_POSTS_FILE_PATH = resolve(

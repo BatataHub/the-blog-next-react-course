@@ -7,6 +7,6 @@ export async function revalidateExampleAction(formData: FormData) {
   console.log('Estou em uma server action', path);
 
   // revalidatePath(`${path}`);
-  revalidateTag('posts'); // home
-  revalidateTag('post-rotina-matinal-de-pessoas-altamente-eficazes'); // single
+  revalidateTag('posts', 'max'); // home
+  revalidateTag('post-rotina-matinal-de-pessoas-altamente-eficazes', 'max'); // single
 }
